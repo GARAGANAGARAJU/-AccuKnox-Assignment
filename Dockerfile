@@ -4,7 +4,7 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN=true
 
-# Update package lists and install required packages
+# Update package lists and install required package
 RUN apt-get update && \
     apt-get install -y fortune-mod cowsay netcat && \
     rm -rf /var/lib/apt/lists/*
