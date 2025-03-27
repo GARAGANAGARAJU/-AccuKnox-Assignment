@@ -11,7 +11,7 @@ LOG_FILE="system_health.log"
 {
     
     
-    # Get system metrics
+    # Get system metric
     CPU_USAGE=$(top -b -n 1 | grep "%Cpu(s)" | awk '{print $2}' | cut -d. -f1)
     MEMORY_USAGE_MB=$(free -m | awk '/Mem/{print $3}')
     DISK_USAGE_MB=$(df -m / | awk 'NR==2{print $3}')
